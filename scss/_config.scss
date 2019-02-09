@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+$background-color: #eee;
+$highlight-color: #009fe3;
+
+body, div, p, span, a, h1, h2, h3 {
+	-webkit-font-smoothing: antialiased;
+}
+
+// Media Query Mixins
+@mixin mediaMdm {
+    @media screen and (min-width: 500px) {
+        @content;
+    }
+}
+
+@mixin mediaLrg {
+    @media screen and (min-width: 700px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}

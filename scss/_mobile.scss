@@ -1,0 +1,26 @@
+/* Screen sizes 500px and up */
+@include mediaMdm {
+    #landing {
+        display: flex;
+        height: 100%;
+    }
+
+    #landing-text {
+        height: 100vh;
+    }
+    #landing-image {
+        height: 100vh;
+    }
+
+    .buttons {
+        margin-top: 4rem;
+    }
+
+    .btn {
+        display: block;
+    }
+}
+
+/* Screen sizes 700px and up */
+@media(min-width: 700px) {
+}

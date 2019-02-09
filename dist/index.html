@@ -20,15 +20,17 @@
                 <div id="landing-text-inner">
                     <h1>Wilfred<br>Magnussen</h1>
                     <h2>Digital Media</h2>
-                    <a href="#about" class="btn" id="about-me">
-                        About Me
-                    </a>
-                    <a href="#portfolio" class="btn" id="view-portfolio">
-                        Portfolio
-                    </a>
-                    <a href="#footer" class="btn" id="contact">
-                        Contact
-                    </a>
+                    <div class="buttons">
+                        <a href="#about" class="btn" id="about-me">
+                            About Me
+                        </a>
+                        <a href="#portfolio" class="btn" id="view-portfolio">
+                            Portfolio
+                        </a>
+                        <a href="#footer" class="btn" id="contact">
+                            Contact
+                        </a>
+                    </div>
                 </div>
             </div>
             <div id="landing-image"></div>
@@ -40,10 +42,14 @@
                 <h2>About Me</h2>
             </div>
             <div class="caption">
-                <h3>Hi, my name is Wilfred and I am a fourth year Digital Media & Design student at Edinburgh Napier University, due to graduate in May!</h3>
-                <p>I have a passion for digital video, photography, design and motion graphics and a drive to work with people on new and exciting projects.</p>
+                <h3>Hi, my name is Wilfred and I am a fourth year Digital Media & Design student at Edinburgh Napier
+                    University, due to graduate in May!</h3>
+                <p>I have a passion for digital video, photography, design and motion graphics and a drive to work with
+                    people on new and exciting projects.</p>
                 <p>My main aim as a digital media practitioner is to keep creating content on projects that inspire me.</p>
-                <p>Working mostly with video, photography and motion graphics throughout University on University briefs as well as jobs for live clients, I have built up a folio of work that showcases my diverse abilities in digital media.</p>
+                <p>Working mostly with video, photography and motion graphics throughout University on University
+                    briefs as well as jobs for live clients, I have built up a folio of work that showcases my diverse
+                    abilities in digital media.</p>
             </div>
         </div>
 
@@ -52,10 +58,13 @@
             <div id="header">
                 <h2>Portfolio</h2>
             </div>
-            <img src="https://source.unsplash.com/random/1600x900" alt="Project 1">
+            <a href="project1.html">
+                <img src="https://source.unsplash.com/random/1600x900" alt="Napier Internship">
+            </a>
             <div class="caption">
-                <h3>Photo One</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, pariatur!</p>
+                <h3><strong>EDINBURGH NAPIER UNIVERSITY</strong> (2018)</h3>
+                <p>I spent my summer as a media intern at my University producing content for the Marketing &
+                    Communications Department.</p>
             </div>
             <img src="https://source.unsplash.com/random/1600x900" alt="Project 2">
             <div class="caption">
@@ -73,12 +82,38 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, pariatur!</p>
             </div>
         </div>
+
+        <!-- Testimonials -->
+        <div id="testimonials">
+            <div id="header">
+                <h2>Testimonials</h2>
+            </div>
+            <input type="checkbox" id="testimonials-checkbox">
+            <label for="testimonials-checkbox"></label>
+            <ul class="testimonials">
+                <li>
+                    <span class="testimonials-icon">&quot;</span>
+                    Wilf has shown excellent professionalism during his internship. He is very creative, reliable and is able to use his own initiative to tackle his workload. I would happily work with Wilf again and know he'll be a great asset to his future employers.
+                    <p><strong>CECILIA FISHER</strong>, Marketing Officer at Edinburgh Napier University</p>
+                </li>
+                <li>
+                    <span class="testimonials-icon">&quot;</span>
+                    Hillside commissioned Wilf to film video content for a client. He took the time to understand the project and what the end product was meant to be. On the day, he was prepared and easy to work with, bringing an attention to detail and aim for perfection that was invaluable. The quality of the video was exactly what we were looking for. His expertise in post-production was vital in helping complete the project.
+                    <p><strong>MARIA STOIAN</strong>, Graphic Designer & Illustrator at Hillside Agency</p>
+                </li>
+                <li>
+                    <span class="testimonials-icon">&quot;</span>
+                    We really enjoyed working with Wilf both as a professional and a creative, he captured innovative shots that showed our work in a new light and sensitively approached the varying environments.
+                    <p><strong>AMY SHIRLAW</strong>, Programme & Marketing Manager at Unique Events</p>
+                </li>
+            </ul>
+        </div>
     </main>
 
     <footer id="footer">
         <h3>Get In Touch</h3>
         <p>Give me an email or a call, I'd love to hear from you!</p>
-        <p>Email: <strong>wilfrodger@hotmail.com</strong></p>
+        <p>Email: <a href="mailto:wilfrodger@hotmail.com"><strong>wilfrodger@hotmail.com</strong></a></p>
         <p>Tel: <strong>0752 727 0937</strong></p>
 
         <div class="copyright">Wilfred Magnussen &copy; 2019</div>
