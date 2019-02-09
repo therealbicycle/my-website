@@ -23,6 +23,12 @@ h2 {
 h3 {
   color: #009fe3; }
 
+h4 {
+  color: #009fe3;
+  font-weight: 200;
+  font-size: 1rem;
+  text-transform: capitalize; }
+
 img {
   display: block;
   width: 100%; }

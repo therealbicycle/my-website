@@ -25,6 +25,13 @@ h3 {
     color: $highlight-color;
 }
 
+h4 {
+    color: $highlight-color;
+    font-weight: 200;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
 img {
     display: block;
     width: 100%;
