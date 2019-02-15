@@ -1,117 +1,128 @@
-$testimonials: 3;
+$testimonials: 4;
+//$testimonials-width: 100vw;
 $testimonials-width: 380px;
 $next: 10 / $testimonials;
 $fade-speed: 8;
 
 @for $i from 1 through $testimonials {
-	$min: ((100/$testimonials)*$i);
-	$max: (100/$testimonials);
-	$left: 0;
-	@if $i > 1 {
-		$left: -($testimonials-width * $i) + $testimonials-width;
-	}
+  $min: ((100 / $testimonials) * $i);
+  $max: (100 / $testimonials);
+  $left: 0;
+  @if $i > 1 {
+    $left: -($testimonials-width * $i) + $testimonials-width;
+  }
 
-	@keyframes testimonials-fade-in-out#{$i} {
-		#{$min - $max}% {
-			opacity: 0;
-			left: $left;
-		}
-		#{($min - ($max / $fade-speed)*3)}% {
-			opacity: 1;
-		}
-		#{$min - ($max / $fade-speed)}% {
-			opacity: 1;
-		}
-		#{min(($min + $next - 0.00001), 99.99999)}% {
-			opacity: 0;
-			left: $left;
-		}
-		#{min(($min + $next), 100)}% {
-			opacity: 0;
-			left: -($testimonials-width * $testimonials);
-		}
-	}
+  @keyframes testimonials-fade-in-out#{$i} {
+    #{$min - $max}% {
+      opacity: 0;
+      left: $left;
+    }
+    #{($min - ($max / $fade-speed)*3)}% {
+      opacity: 1;
+    }
+    #{$min - ($max / $fade-speed)}% {
+      opacity: 1;
+    }
+    #{min(($min + $next - 0.00001), 99.99999)}% {
+      opacity: 0;
+      left: $left;
+    }
+    #{min(($min + $next), 100)}% {
+      opacity: 0;
+      left: -($testimonials-width * $testimonials);
+    }
+  }
 }
 
 .testimonials {
-	position: relative;
-	text-align: center;
-	display: block;
-	padding: 10px 0;
-	margin: 0;
-	width: $testimonials-width; // adjust with media queries
-	overflow: hidden;
+  position: relative;
+  text-align: left;
+  display: block;
+  padding: 0.8rem 2rem;
+  margin: auto;
+  width: $testimonials-width; // adjust with media queries
+  overflow: hidden;
 
-	> li {
-		position: relative;
-		text-align: justify;
-		width: $testimonials-width - 5;
-		color: #444;
-		display: block;
-		list-style: none;
-		margin: 0 0 30px 0;
-		padding: 0;
+  > li {
+    position: relative;
+    display: block;
+    list-style: none;
+    margin-bottom: 30px;
+    padding: 0;
 
-		> p {
-			text-align: right;
-			margin: 8px 0 0;
-		}
-	}
+    > .reference {
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      margin-block-start: 2em;
+      margin-block-end: 0;
+      line-height: 1.5em;
+    }
+
+    > h4 {
+      margin-top: 0.5rem;
+    }
+  }
 }
 
 #testimonials-checkbox {
-	display: none;
+  display: none;
 
-	+ label {
-		display: inline-block;
-		cursor: pointer;
-		line-height: 22px;
-		border-radius: 11px;
-		background-color: $highlight-color;
-		padding: 0 10px;
-		font-size: 0.8em;
-		color: #fff;
-		margin-bottom: 20px;
+  + label {
+    display: inline-block;
+    cursor: pointer;
+    line-height: 22px;
+    border-radius: 50px;
+    background-color: $highlight-color;
+    padding: 0.25rem 1rem;
+    font-size: 0.8em;
+    color: #fff;
+    margin: 1rem 0;
 
-		&:before {
-			content: "Back";
-		}
+    &:before {
+      content: "Back";
+    }
+  }
+
+  &:not(:checked) + label {
+    &:before {
+      content: "Read all my testimonials";
     }
 
+    + ul.testimonials {
+      overflow: hidden;
+      white-space: nowrap;
+      vertical-align: middle;
 
-	&:not(:checked) + label {
-		&:before {
-			content: "Read all my testimonials";
-		}
+      > li {
+        margin: 30;
+        opacity: 0;
+        display: inline-block;
+        white-space: normal;
 
-		+ ul.testimonials {
-			overflow: hidden;
-			white-space: nowrap;
-			vertical-align: middle;
-
-			> li {
-				margin: 0;
-				opacity: 0;
-				display: inline-block;
-				white-space: normal;
-
-				@for $i from 1 through $testimonials {
-					&:nth-of-type(#{$i}) {
-						animation: testimonials-fade-in-out#{$i} $testimonials*8s infinite;
-					}
-				}
-			}
-		}
-	}
+        @for $i from 1 through $testimonials {
+          &:nth-of-type(#{$i}) {
+            animation: testimonials-fade-in-out#{$i} $testimonials * 8s infinite;
+          }
+        }
+      }
+    }
+  }
 }
 
-.testimonials-icon {
-	display: inline-block;
-	margin: 0 4px 4px 0;
-	font-weight: 900;
-	font-size: 72px;
-	height: 46px;
-	line-height: 109px;
-	overflow: hidden;
-	color: #ddd;
+blockquote:before {
+  content: open-quote;
+}
+
+blockquote:after {
+  content: close-quote;
+}
+
+blockquote:before,
+blockquote:after {
+  display: inline-block;
+  vertical-align: bottom;
+  color: $highlight-color;
+  font-size: 4em;
+  top: 0.2em;
+  position: relative;
 }

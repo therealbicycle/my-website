@@ -1,6 +1,6 @@
 // Smooth scroll to About me
 $('#about-me').on('click', function () {
-    const about = $('#about').position().top;
+    const about = $('#about-section').position().top;
 
     $('html, body').animate({
         scrollTop: about
@@ -11,7 +11,7 @@ $('#about-me').on('click', function () {
 
 // Smooth scroll to portfolio
 $('#view-portfolio').on('click', function () {
-    const portfolio = $('#portfolio').position().top;
+    const portfolio = $('#portfolio-section').position().top;
 
     $('html, body').animate({
         scrollTop: portfolio
