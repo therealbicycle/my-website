@@ -1,3 +1,9 @@
+/* Screen sizes 499px and down */
+@include mediaSml {
+    .btn {
+        width: 66px;
+    }
+}
 /* Screen sizes 500px and up */
 @include mediaMdm {
     #landing {
@@ -8,7 +14,12 @@
     #landing-text {
         height: 100vh;
     }
+
     #landing-image {
+        height: 100vh;
+    }
+    
+    #landing-video {
         height: 100vh;
     }
 

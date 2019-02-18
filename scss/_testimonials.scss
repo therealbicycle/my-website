@@ -1,6 +1,6 @@
 $testimonials: 4;
-//$testimonials-width: 100vw;
-$testimonials-width: 380px;
+//$testimonials-width: 380px; OG width
+$testimonials-width: 100%;
 $next: 10 / $testimonials;
 $fade-speed: 8;
 
@@ -36,16 +36,15 @@ $fade-speed: 8;
 
 .testimonials {
   position: relative;
+  //width: $testimonials-width; // adjust with media queries
   text-align: left;
   display: block;
-  padding: 0.8rem 2rem;
+  padding: 0 2rem;
   margin: auto;
-  width: $testimonials-width; // adjust with media queries
   overflow: hidden;
 
   > li {
     position: relative;
-    display: block;
     list-style: none;
     margin-bottom: 30px;
     padding: 0;
@@ -69,6 +68,7 @@ $fade-speed: 8;
 
   + label {
     display: inline-block;
+    position: center;
     cursor: pointer;
     line-height: 22px;
     border-radius: 50px;
@@ -76,7 +76,7 @@ $fade-speed: 8;
     padding: 0.25rem 1rem;
     font-size: 0.8em;
     color: #fff;
-    margin: 1rem 0;
+    margin: 1rem;
 
     &:before {
       content: "Back";
@@ -91,13 +91,12 @@ $fade-speed: 8;
     + ul.testimonials {
       overflow: hidden;
       white-space: nowrap;
-      vertical-align: middle;
 
       > li {
-        margin: 30;
         opacity: 0;
         display: inline-block;
         white-space: normal;
+        vertical-align: middle;
 
         @for $i from 1 through $testimonials {
           &:nth-of-type(#{$i}) {

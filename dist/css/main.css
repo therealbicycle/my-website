@@ -73,6 +73,31 @@ main {
   flex: 0 1 60vw;
   margin: 0; }
 
+#landing-video {
+  height: 50vh;
+  flex: 0 1 60vw;
+  overflow: hidden; }
+  #landing-video #landing-video-content {
+    object-fit: cover;
+    object-position: center;
+    filter: blur(0.25rem);
+    height: 125%;
+    width: 125%; }
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0; }
+  .video-wrapper iframe {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%; }
+
 .buttons {
   margin-top: 2rem; }
 
@@ -80,7 +105,7 @@ main {
   display: inline-block;
   padding: 0.5rem 2rem;
   border: 1px #ccc solid;
-  margin-top: 1rem;
+  margin: 1rem;
   border-radius: 50px;
   text-decoration: none;
   color: #333;
@@ -88,32 +113,39 @@ main {
   .btn:hover {
     background: #f4f4f4; }
 
-#header {
+.parallax {
+  background-attachment: fixed; }
+
+.header {
   padding: 1.5rem;
   text-align: center;
   background: #333;
   color: #fff; }
-  #header h2 {
+  .header h2 {
     border-left: 1px #fff dotted;
     border-right: 1px #fff dotted;
     display: inline-block;
     padding-left: 3rem;
     padding-right: 3rem; }
 
-.caption,
-.job {
+.caption {
   padding: 0.8rem;
   text-align: center;
   border-bottom: 1px #ccc solid;
   margin-bottom: 1.5rem; }
-  .caption .job-name,
-  .job .job-name {
-    font-weight: 400;
-    text-transform: uppercase; }
 
-.video {
-  border-top: 1px #ccc solid;
-  margin-top: 1.5rem; }
+.caption-name {
+  font-weight: 400;
+  text-transform: uppercase; }
+
+#projects-section .project {
+  height: 40vh; }
+  #projects-section .project#project-1 {
+    background: url(../img/showcase.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
 
 @keyframes testimonials-fade-in-out1 {
   0% {
@@ -128,64 +160,62 @@ main {
     left: 0; }
   27.5% {
     opacity: 0;
-    left: -1520px; } }
+    left: -400%; } }
 
 @keyframes testimonials-fade-in-out2 {
   25% {
     opacity: 0;
-    left: -380px; }
+    left: -100%; }
   40.625% {
     opacity: 1; }
   46.875% {
     opacity: 1; }
   52.49999% {
     opacity: 0;
-    left: -380px; }
+    left: -100%; }
   52.5% {
     opacity: 0;
-    left: -1520px; } }
+    left: -400%; } }
 
 @keyframes testimonials-fade-in-out3 {
   50% {
     opacity: 0;
-    left: -760px; }
+    left: -200%; }
   65.625% {
     opacity: 1; }
   71.875% {
     opacity: 1; }
   77.49999% {
     opacity: 0;
-    left: -760px; }
+    left: -200%; }
   77.5% {
     opacity: 0;
-    left: -1520px; } }
+    left: -400%; } }
 
 @keyframes testimonials-fade-in-out4 {
   75% {
     opacity: 0;
-    left: -1140px; }
+    left: -300%; }
   90.625% {
     opacity: 1; }
   96.875% {
     opacity: 1; }
   99.99999% {
     opacity: 0;
-    left: -1140px; }
+    left: -300%; }
   100% {
     opacity: 0;
-    left: -1520px; } }
+    left: -400%; } }
 
 .testimonials {
   position: relative;
   text-align: left;
   display: block;
-  padding: 0.8rem 2rem;
+  padding: 0 2rem;
   margin: auto;
-  width: 380px;
   overflow: hidden; }
   .testimonials > li {
     position: relative;
-    display: block;
     list-style: none;
     margin-bottom: 30px;
     padding: 0; }
@@ -202,6 +232,7 @@ main {
   display: none; }
   #testimonials-checkbox + label {
     display: inline-block;
+    position: center;
     cursor: pointer;
     line-height: 22px;
     border-radius: 50px;
@@ -209,20 +240,19 @@ main {
     padding: 0.25rem 1rem;
     font-size: 0.8em;
     color: #fff;
-    margin: 1rem 0; }
+    margin: 1rem; }
     #testimonials-checkbox + label:before {
       content: "Back"; }
   #testimonials-checkbox:not(:checked) + label:before {
     content: "Read all my testimonials"; }
   #testimonials-checkbox:not(:checked) + label + ul.testimonials {
     overflow: hidden;
-    white-space: nowrap;
-    vertical-align: middle; }
+    white-space: nowrap; }
     #testimonials-checkbox:not(:checked) + label + ul.testimonials > li {
-      margin: 30;
       opacity: 0;
       display: inline-block;
-      white-space: normal; }
+      white-space: normal;
+      vertical-align: middle; }
       #testimonials-checkbox:not(:checked) + label + ul.testimonials > li:nth-of-type(1) {
         animation: testimonials-fade-in-out1 32s infinite; }
       #testimonials-checkbox:not(:checked) + label + ul.testimonials > li:nth-of-type(2) {
@@ -257,6 +287,9 @@ footer {
     margin-bottom: 0; }
   footer a {
     color: inherit; }
+    footer a:hover {
+      color: #009fe3;
+      transition: all 750ms ease-out; }
   footer .icons {
     padding: 1rem; }
     footer .icons a {
@@ -268,6 +301,11 @@ footer {
     padding: 2rem;
     font-size: 0.8rem; }
 
+/* Screen sizes 499px and down */
+@media screen and (max-width: 499px) {
+  .btn {
+    width: 66px; } }
+
 /* Screen sizes 500px and up */
 @media screen and (min-width: 500px) {
   #landing {
@@ -276,6 +314,8 @@ footer {
   #landing-text {
     height: 100vh; }
   #landing-image {
+    height: 100vh; }
+  #landing-video {
     height: 100vh; }
   .buttons {
     margin-top: 4rem; }

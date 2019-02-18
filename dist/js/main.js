@@ -9,12 +9,23 @@ $('#about-me').on('click', function () {
     );
 });
 
-// Smooth scroll to portfolio
-$('#view-portfolio').on('click', function () {
-    const portfolio = $('#portfolio-section').position().top;
+// Smooth scroll to showreel
+$('#view-showreel').on('click', function () {
+    const showreel = $('#showreel-section').position().top;
 
     $('html, body').animate({
-        scrollTop: portfolio
+        scrollTop: showreel
+    },
+        'slow'
+    );
+});
+
+// Smooth scroll to projects section
+$('#view-projects').on('click', function () {
+    const projects = $('#projects-section').position().top;
+
+    $('html, body').animate({
+        scrollTop: projects
     },
         'slow'
     );
