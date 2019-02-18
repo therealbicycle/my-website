@@ -8,7 +8,8 @@
     <meta name="author" content="Wilfred Magnussen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <title>Wilfred Magnussen | Digital Media</title>
 </head>
@@ -25,8 +26,11 @@
                         <a href="#about-section" class="btn" id="about-me">
                             About Me
                         </a>
-                        <a href="#portfolio-section" class="btn" id="view-portfolio">
-                            Portfolio
+                        <a href="#showreel-section" class="btn" id="view-showreel">
+                            Showreel
+                        </a>
+                        <a href="#project-section" class="btn" id="view-projects">
+                            Projects
                         </a>
                         <a href="#footer" class="btn" id="contact">
                             Contact
@@ -34,12 +38,22 @@
                     </div>
                 </div>
             </div>
-            <div id="landing-image"></div>
+
+            <div id="landing-video">
+                <video id="landing-video-content" autoplay muted loop poster="img/poster.jpg">
+                    <source src="img/showcase-video.mp4" type="video/mp4">
+
+                    <!-- Can add additional media (types) if content not support by browser -->
+                    <source src="img/showcase-video.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <!-- <div id="landing-image"></div> -->
         </div>
 
         <!-- About Me -->
         <div id="about-section">
-            <div id="header">
+            <div class="header">
                 <h2>About Me</h2>
             </div>
             <div class="caption">
@@ -54,53 +68,65 @@
             </div>
         </div>
 
-        <!-- Images -->
-        <div id="portfolio-section">
-            <div id="header">
-                <h2>Portfolio</h2>
+        <!-- Showreel -->
+        <div id="showreel-section">
+            <div class="header">
+                <h2>Showreel</h2>
             </div>
-            <a href="enu-internship.html">
-                <img src="https://source.unsplash.com/random/1600x900" alt="Napier Internship">
-            </a>
-            <div class="job">
-                <h3 class="job-name"><strong>Edinburgh Napier University Internship</strong> (2018)</h3>
-                <p>I spent my summer as a media intern at my University producing content for the Marketing &
-                    Communications Department.</p>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/caidbARfK5I" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
-            <img src="https://source.unsplash.com/random/1600x900" alt="Project 2">
-            <div class="job">
-                <h3 class="job-name"><strong>Blockpass Identity Lab Launch</strong> (2018)</h3>
-                <p>Video coverage of the launch event of a groundbreaking computing laborotory at Edinburgh Napier's Merchiston campus.</p>
+            <div class="caption">
+                <!-- <h3 class="caption-name"><strong>Showreel</strong> (2018)</h3> -->
             </div>
-            <img src="https://source.unsplash.com/random/1600x900" alt="Project 3">
-            <div class="job">
-                <h3 class="job-name"><strong>University Course Projects</strong> (2015-19)</h3>
-                <p>A collection of projects that I have worked on throughout my time at University spanning briefs in motion graphics, video and animation.</p>
+        </div>
+
+        <!-- Projects -->
+        <div id="projects-section">
+            <div class="header">
+                <h2>Projects</h2>
+            </div>
+            <div class="project" id="project-1"></div>
+            <div class="caption">
+                <h3 class="caption-name"><strong>Edinburgh Napier University Internship</strong> (2018)</h3>
+                <p>I spent my summer as a media intern at my University producing content for the Marketing & Communications Department.</p>
             </div>
         </div>
 
         <!-- Testimonials -->
         <div id="testimonials-section">
-            <div id="header">
+            <div class="header">
                 <h2>Testimonials</h2>
             </div>
             <input type="checkbox" id="testimonials-checkbox">
             <label for="testimonials-checkbox"></label>
             <ul class="testimonials">
                 <li>
-                    <blockquote class="reference">Wilf is very creative, <strong>reliable</strong> and is able to <strong>use his own initiative</strong> to tackle his workload.<br>
-                    This was demonstrated during his internship where he was able to follow a given brief, make suggestions on creatives and worked collaboratively with a fellow intern to carry out various filming and independently edit footage for the intended videos.<br>
-                    I would happily work with Wilf again and know <strong>he’ll be a great asset to his future employers</strong>.</blockquote>
+                    <blockquote class="reference">Wilf is very creative, <strong>reliable</strong> and is able to
+                        <strong>use his own initiative</strong> to tackle his workload.
+                        <p>This was demonstrated during his internship where he was able to follow a given brief,
+                            makesuggestions on creatives and worked collaboratively with a fellow intern to carry out
+                            various filming and independently edit footage for the intended videos.</p>
+                        I would happily work with Wilf again and know <strong>he’ll be a great asset to his future
+                            employers</strong>.</blockquote>
                     <h4><strong>CECILIA FISHER</strong>, Marketing Officer at Edinburgh Napier University</h4>
                 </li>
                 <li>
-                    <blockquote class="reference">Hillside commissioned Wilf to film video content for a client. He took the time to understand the project and what the end product was meant to be. On the day, <strong>he was prepared and easy to work with</strong>, bringing an attention to detail and <strong>aim for perfection</strong> that was invaluable.<br>
-                    The quality of the video was exactly what we were looking for and his <strong>expertise in post-production</strong> was vital in helping complete the project.</blockquote>
-                    <h4><strong>MARIA STOIAN</strong>, Graphic Designer & Illustrator at Hillside Agency</h4>
+                    <blockquote class="reference">We really enjoyed working with Wilf both as <strong>a professional and
+                            a creative</strong>, he captured innovative shots that showed our work in a new light and
+                        sensitively approached the varying environments.</blockquote>
+                    <h4><strong>AMY SHIRLAW</strong>, Programme & Marketing Manager at Unique Events</h4>
                 </li>
                 <li>
-                    <blockquote class="reference">We really enjoyed working with Wilf both as <strong>a professional and a creative</strong>, he captured innovative shots that showed our work in a new light and sensitively approached the varying environments.</blockquote>
-                    <h4><strong>AMY SHIRLAW</strong>, Programme & Marketing Manager at Unique Events</h4>
+                    <blockquote class="reference">Hillside commissioned Wilf to film video content for a client. He took
+                        the time to understand the project and what the end product was meant to be.
+                        <p>On the day, <strong>he was prepared and easy to work with</strong>, bringing an attention to
+                            detail and <strong>aim for perfection</strong> that was invaluable.</p>
+                        The quality of the video was exactly what we were looking for and his <strong>expertise in
+                            post-production</strong> was vital in helping complete the project.</blockquote>
+                    <h4><strong>MARIA STOIAN</strong>, Graphic Designer & Illustrator at Hillside Agency</h4>
                 </li>
                 <li>
                     <blockquote class="reference">Great guy. <strong>Good shoes.</strong></blockquote>
@@ -117,23 +143,22 @@
         <p>Tel: <strong>0752 727 0937</strong></p>
 
         <div class="icons">
-			<a href="#https://www.linkedin.com/in/wilfred-magnussen-b527bb7a" target="_blank">
-				<i class="fab fa-linkedin fa-2x"></i>
-			</a>
-			<a href="https://www.instagram.com/wilfotograf/" target="_blank">
-				<i class="fab fa-instagram fa-2x"></i>
-			</a>
-			<a href="https://vimeo.com/wilfotograf" target="_blank">
-				<i class="fab fa-vimeo fa-2x"></i>
-			</a>
-		</div>
+            <a href="#https://www.linkedin.com/in/wilfred-magnussen-b527bb7a" target="_blank">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/wilfotograf/" target="_blank">
+                <i class="fab fa-instagram fa-2x"></i>
+            </a>
+            <a href="https://vimeo.com/wilfotograf" target="_blank">
+                <i class="fab fa-vimeo fa-2x"></i>
+            </a>
+        </div>
 
         <div class="copyright">Wilfred Magnussen &copy; 2019</div>
     </footer>
 
 
-    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
     <script src="js/main.js"></script>
 </body>

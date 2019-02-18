@@ -32,7 +32,7 @@ h4 {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
@@ -75,6 +75,40 @@ main {
   margin: 0;
 }
 
+#landing-video {
+  height: 50vh;
+  flex: 0 1 60vw;
+  overflow: hidden;
+
+  #landing-video-content {
+    object-fit: cover;
+    object-position: center;
+
+    filter: blur(0.25rem);
+
+    // extra size to cover blur size
+    height: 125%;
+    width: 125%;
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+
+  iframe {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+  }
+}
+
 .buttons {
   margin-top: 2rem;
 }
@@ -83,18 +117,22 @@ main {
   display: inline-block;
   padding: 0.5rem 2rem;
   border: 1px #ccc solid;
-  margin-top: 1rem;
+  margin: 1rem;
   border-radius: 50px;
   text-decoration: none;
   color: #333;
   transition: background 500ms ease-in;
-  
+
   &:hover {
     background: #f4f4f4;
   }
 }
 
-#header {
+.parallax {
+  background-attachment: fixed;
+}
+
+.header {
   padding: 1.5rem;
   text-align: center;
   background: #333;
@@ -109,27 +147,36 @@ main {
   }
 }
 
-.caption,
-.job {
+.caption {
   padding: 0.8rem;
   text-align: center;
   border-bottom: 1px #ccc solid;
   margin-bottom: 1.5rem;
-
-  .job-name {
-    font-weight: 400;
-    text-transform: uppercase;
-  }
 }
 
-.video {
-  border-top: 1px #ccc solid;
-  margin-top: 1.5rem;
+.caption-name {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+#projects-section {
+  .project {
+    height: 40vh;
+
+    &#project-1 {
+      background: $home-image;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 // Testimonials
 @import "testimonials";
 
+// Footer
 footer {
   text-align: center;
   padding: 2rem 1rem 0 1rem;
@@ -142,6 +189,11 @@ footer {
   }
   a {
     color: inherit;
+
+    &:hover {
+      color: $highlight-color;
+      @include easeOut();
+    }
   }
 
   .icons {

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web");
 
 $home-image: url(../img/showcase.jpg);
+$home-video: url(../img/showcase-video.mp4);
 $background-color: #eee;
 $highlight-color: #009fe3;
 
@@ -22,6 +23,12 @@ h4 {
 }
 
 // Media Query Mixins
+@mixin mediaSml {
+  @media screen and (max-width: 499px) {
+    @content;
+  }
+}
+
 @mixin mediaMdm {
   @media screen and (min-width: 500px) {
     @content;
