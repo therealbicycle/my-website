@@ -2,6 +2,11 @@
 
 $home-image: url(../img/showcase.jpg);
 $home-video: url(../img/showcase-video.mp4);
+
+$project-1-image: url(../img/project-1-image.png);
+$project-2-image: url(../img/project-2-image.png);
+
+
 $background-color: #eee;
 $highlight-color: #009fe3;
 
@@ -20,6 +25,10 @@ h4 {
 
 @mixin easeOut {
 	transition: all 750ms ease-out;
+}
+
+@mixin parallax {
+  background-attachment: fixed;
 }
 
 // Media Query Mixins

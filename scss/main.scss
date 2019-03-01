@@ -33,6 +33,10 @@ h4 {
 
 a {
   text-decoration: none;
+
+  &:link, &:visited {
+    color: inherit;
+  }
 }
 
 img {
@@ -84,7 +88,7 @@ main {
     object-fit: cover;
     object-position: center;
 
-    filter: blur(0.25rem);
+    filter: blur(1rem);
 
     // extra size to cover blur size
     height: 125%;
@@ -128,10 +132,6 @@ main {
   }
 }
 
-.parallax {
-  background-attachment: fixed;
-}
-
 .header {
   padding: 1.5rem;
   text-align: center;
@@ -145,13 +145,27 @@ main {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+
+  a:hover {
+    transition: background 500ms ease-in;
+    color: $highlight-color;
+  }
 }
 
 .caption {
   padding: 0.8rem;
   text-align: center;
-  border-bottom: 1px #ccc solid;
-  margin-bottom: 1.5rem;
+
+  .btn {
+    display: inline-block;
+    font-size: 0.9rem;
+    padding: 0.4rem 1.5rem;
+    transition: background 500ms ease-in;
+
+    &:hover {
+      background: #ddd;
+    }
+  }
 }
 
 .caption-name {
@@ -164,11 +178,25 @@ main {
     height: 40vh;
 
     &#project-1 {
-      background: $home-image;
-      background-attachment: fixed;
+      background: $project-1-image;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
+
+      &.parallax {
+        @include parallax;
+      }
+    }
+
+    &#project-2 {
+      background: $project-2-image;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &.parallax {
+        @include parallax;
+      }
     }
   }
 }

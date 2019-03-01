@@ -39,6 +39,8 @@ h4 {
 
 a {
   text-decoration: none; }
+  a:link, a:visited {
+    color: inherit; }
 
 img {
   display: block;
@@ -80,7 +82,7 @@ main {
   #landing-video #landing-video-content {
     object-fit: cover;
     object-position: center;
-    filter: blur(0.25rem);
+    filter: blur(1rem);
     height: 125%;
     width: 125%; }
 
@@ -113,9 +115,6 @@ main {
   .btn:hover {
     background: #f4f4f4; }
 
-.parallax {
-  background-attachment: fixed; }
-
 .header {
   padding: 1.5rem;
   text-align: center;
@@ -127,12 +126,20 @@ main {
     display: inline-block;
     padding-left: 3rem;
     padding-right: 3rem; }
+  .header a:hover {
+    transition: background 500ms ease-in;
+    color: #009fe3; }
 
 .caption {
   padding: 0.8rem;
-  text-align: center;
-  border-bottom: 1px #ccc solid;
-  margin-bottom: 1.5rem; }
+  text-align: center; }
+  .caption .btn {
+    display: inline-block;
+    font-size: 0.9rem;
+    padding: 0.4rem 1.5rem;
+    transition: background 500ms ease-in; }
+    .caption .btn:hover {
+      background: #ddd; }
 
 .caption-name {
   font-weight: 400;
@@ -141,11 +148,19 @@ main {
 #projects-section .project {
   height: 40vh; }
   #projects-section .project#project-1 {
-    background: url(../img/showcase.jpg);
-    background-attachment: fixed;
+    background: url(../img/project-1-image.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
+    #projects-section .project#project-1.parallax {
+      background-attachment: fixed; }
+  #projects-section .project#project-2 {
+    background: url(../img/project-2-image.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    #projects-section .project#project-2.parallax {
+      background-attachment: fixed; }
 
 @keyframes testimonials-fade-in-out1 {
   0% {
