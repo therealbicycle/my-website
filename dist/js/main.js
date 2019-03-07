@@ -15,6 +15,20 @@ $('#view-showreel').on('click', function () {
 
     $('html, body').animate({
         scrollTop: showreel
+<<<<<<< HEAD
+=======
+    },
+        'slow'
+    );
+});
+
+// Smooth scroll to projects section
+$('#view-projects').on('click', function () {
+    const projects = $('#projects-section').position().top;
+
+    $('html, body').animate({
+        scrollTop: projects
+>>>>>>> 376211b93d616f8a52a540d5f0b8a371bc845875
     },
         'slow'
     );
