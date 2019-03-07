@@ -34,7 +34,8 @@ h4 {
 a {
   text-decoration: none;
 
-  &:link, &:visited {
+  &:link,
+  &:visited {
     color: inherit;
   }
 }

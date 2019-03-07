@@ -1,44 +1,44 @@
 /* Screen sizes 499px and down */
 @include mediaSml {
-    .btn {
-        width: 66px;
-    }
+  .btn {
+    width: 66px;
+  }
 }
 /* Screen sizes 500px and up */
 @include mediaMdm {
-    #landing {
-        display: flex;
-        height: 100%;
-    }
+  #landing {
+    display: flex;
+    height: 100%;
+  }
 
-    #landing-text {
-        height: 100vh;
-    }
+  #landing-text {
+    height: 100vh;
+  }
 
-    #landing-image {
-        height: 100vh;
-    }
-    
-    #landing-video {
-        height: 100vh;
-    }
+  #landing-image {
+    height: 100vh;
+  }
 
-    .buttons {
-        margin-top: 4rem;
-    }
+  #landing-video {
+    height: 100vh;
+  }
 
-    .btn {
-        display: block;
-    }
+  .buttons {
+    margin-top: 4rem;
+  }
+
+  .btn {
+    display: block;
+  }
 }
 
 /* Screen sizes 700px and up */
 @include mediaLrg {
-    p {
-        font-size: 1.2rem;
-    }
+  p {
+    font-size: 1.2rem;
+  }
 
-    .caption {
-        padding: 0.8rem 3rem;
-    }
+  .caption {
+    padding: 0.8rem 3rem;
+  }
 }
