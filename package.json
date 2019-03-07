@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/therealbicycle/my-website/issues"
   },
-  "homepage": "https://github.com/therealbicycle/my-website",
+  "homepage": "https://therealbicycle.github.io/my-website",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0"
