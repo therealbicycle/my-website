@@ -153,8 +153,8 @@ main {
 }
 
 .caption {
-  padding: 0.8rem;
   text-align: center;
+  padding: 0.8rem;
 
   .btn {
     display: inline-block;
@@ -187,9 +187,29 @@ main {
         @include parallax;
       }
     }
+    &#project-1-clicked {
+      background: $project-1-clicked-image;
+      background-position: bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &.parallax {
+        @include parallax;
+      }
+    }
 
     &#project-2 {
       background: $project-2-image;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      &.parallax {
+        @include parallax;
+      }
+    }
+    &#project-2-clicked {
+      background: $project-2-clicked-image;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;

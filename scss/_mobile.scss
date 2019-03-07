@@ -33,6 +33,12 @@
 }
 
 /* Screen sizes 700px and up */
-@media(min-width: 700px) {
-    
+@include mediaLrg {
+    p {
+        font-size: 1.2rem;
+    }
+
+    .caption {
+        padding: 0.8rem 3rem;
+    }
 }

@@ -131,8 +131,8 @@ main {
     color: #009fe3; }
 
 .caption {
-  padding: 0.8rem;
-  text-align: center; }
+  text-align: center;
+  padding: 0.8rem; }
   .caption .btn {
     display: inline-block;
     font-size: 0.9rem;
@@ -154,12 +154,26 @@ main {
     background-repeat: no-repeat; }
     #projects-section .project#project-1.parallax {
       background-attachment: fixed; }
+  #projects-section .project#project-1-clicked {
+    background: url(../img/project-1-clicked-image.png);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    #projects-section .project#project-1-clicked.parallax {
+      background-attachment: fixed; }
   #projects-section .project#project-2 {
     background: url(../img/project-2-image.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
     #projects-section .project#project-2.parallax {
+      background-attachment: fixed; }
+  #projects-section .project#project-2-clicked {
+    background: url(../img/project-2-clicked-image.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    #projects-section .project#project-2-clicked.parallax {
       background-attachment: fixed; }
 
 @keyframes testimonials-fade-in-out1 {
@@ -240,6 +254,8 @@ main {
       margin-block-start: 2em;
       margin-block-end: 0;
       line-height: 1.5em; }
+      .testimonials > li > .reference p {
+        font-size: 1rem; }
     .testimonials > li > h4 {
       margin-top: 0.5rem; }
 
@@ -338,3 +354,8 @@ footer {
     display: block; } }
 
 /* Screen sizes 700px and up */
+@media screen and (min-width: 700px) {
+  p {
+    font-size: 1.2rem; }
+  .caption {
+    padding: 0.8rem 3rem; } }
