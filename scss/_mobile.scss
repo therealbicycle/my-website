@@ -1,9 +1,17 @@
-/* Screen sizes 499px and down */
+/* Screen sizes 363px and down */
+@include mediaXSml {
+  .btn {
+    margin: 0.5rem;
+  }
+}
+
+/* Screen sizes 364px and up */
 @include mediaSml {
   .btn {
     width: 66px;
   }
 }
+
 /* Screen sizes 500px and up */
 @include mediaMdm {
   #landing {

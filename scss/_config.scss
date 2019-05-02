@@ -33,8 +33,14 @@ h4 {
 }
 
 // Media Query Mixins
+@mixin mediaXSml {
+  @media screen and (max-width: 363px) {
+    @content;
+  }
+}
+
 @mixin mediaSml {
-  @media screen and (max-width: 499px) {
+  @media screen and (min-width: 364px) {
     @content;
   }
 }
